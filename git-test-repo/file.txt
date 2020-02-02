@@ -1,0 +1,15 @@
+This is first commit from master
+
+This is commit 2 from master
+
+This is commit 3 from master
+
+This is first commit number 1 from develop
+
+This is commit 2 from develop
+
+This is commit 1 from feature 1
+
+This is commit 3 from develop
+
+This is commit to test reset 1

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Android Learning</string>
+
+    <string name="current_language">English</string>
+    <string name="open">Open</string>
+    <string name="sample_text">This is sample text</string>
+
+    <string name="search_hint">Search on Wikipedia</string>
+
+    <string name="error">An error occurred. Retry later</string>
+</resources>

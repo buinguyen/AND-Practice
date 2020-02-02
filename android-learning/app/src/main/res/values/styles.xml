@@ -1,0 +1,11 @@
+<resources>
+
+    <!-- Base application theme. -->
+
+    <style name="MyAlertDialogStyle" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorAccent">@android:color/holo_orange_dark</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:background">@android:color/holo_purple</item>
+    </style>
+
+</resources>

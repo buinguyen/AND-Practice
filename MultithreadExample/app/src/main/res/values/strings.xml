@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Multithread Example</string>
+
+    <string name="permission_alert_title">Permission Alert</string>
+    <string name="permission_alert_msg">Please click OK button to allow permissions. If not, click Quit button</string>
+    <string name="permission_alert_positive_text">OK</string>
+    <string name="permission_alert_negative_text">Quit</string>
+
+    <string name="location_alert_title">Location Alert</string>
+    <string name="location_alert_msg">Please click OK button to enable location.</string>
+    <string name="location_alert_positive_text">OK</string>
+
+    <string name="text_posting_status">Post data to server: %1$s</string>
+    <string name="text_location_status">%1$s X,Y = %2$f, %3$f\n</string>
+    <string name="text_battery_status">%1$s %2$d %%\n</string>
+
+    <string name="notify_permission_is_granted">Permission is granted</string>
+    <string name="notify_turn_on_location">Please turn on location</string>
+    <string name="notify_enable_gps">GPS is enabled</string>
+</resources>

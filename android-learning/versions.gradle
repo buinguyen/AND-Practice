@@ -1,0 +1,299 @@
+/**
+ * Shared file between builds so that they can all use the same dependencies and
+ * maven repositories.
+ **/
+ext.deps = [:]
+def deps = [:]
+
+def versions = [
+        support         : '1.0.0-beta01',
+        kotlin          : "1.3.10",
+        okhttp3         : "3.10.0",
+        stetho          : "1.5.0",
+        junit           : "4.12",
+        fresco          : "1.10.0",
+        gson            : "2.8.5",
+        leakCanary      : "1.6.1",
+        javaxAnnotation : "1.0",
+        arch            : "1.1.0",
+        rx              : "1.1.6",
+        dagger          : "2.16",
+        constraintLayout: '1.1.3',
+        retrofit        : "2.4.0",
+        multidex        : "1.0.3",
+        facebook        : "4.36.0",
+        butterKnife     : "8.8.1",
+        eventBus        : "3.1.1",
+        threaddebugger  : "1.3.3",
+        airbnbDeepLink  : "3.1.0",
+        glide           : "4.7.1",
+        playServices    : "15.0.1"
+]
+
+def support = [
+        annotations : "androidx.annotation:annotation:${versions.support}",
+        app_compat  : "androidx.appcompat:appcompat:${versions.support}",
+        recyclerview: "androidx.recyclerview:recyclerview:${versions.support}",
+        cardview    : "androidx.cardview:cardview:${versions.support}",
+        design      : "com.google.android.material:material:${versions.support}",
+        v4          : "androidx.legacy:legacy-support-v4:${versions.support}",
+        v13         : "androidx.legacy:legacy-support-v13:${versions.support}",
+        core_utils  : "com.android.support:support-core-utils:${versions.support}",
+        customtabs  : "com.android.support:customtabs:${versions.support}",
+        transition  : "androidx.transition:transition:${versions.support}"
+]
+deps.support = support
+
+def kotlin = [
+        stdlib: "org.jetbrains.kotlin:kotlin-stdlib:${versions.kotlin}",
+        test  : "org.jetbrains.kotlin:kotlin-test-junit:${versions.kotlin}",
+        plugin: "org.jetbrains.kotlin:kotlin-gradle-plugin:${versions.kotlin}"
+]
+deps.kotlin = kotlin
+
+def fresco = [
+        fresco              : "com.facebook.fresco:fresco:${versions.fresco}",
+        animated_gif        : "com.facebook.fresco:animated-gif:${versions.fresco}",
+        animated_webp       : "com.facebook.fresco:animated-webp:${versions.fresco}",
+        webpsupport         : "com.facebook.fresco:webpsupport:${versions.fresco}",
+        imagePipelineOkhttp3: "com.facebook.fresco:imagepipeline-okhttp3:${versions.fresco}"
+]
+deps.fresco = fresco
+
+def okhttp3 = [
+        okhttp: "com.squareup.okhttp3:okhttp:${versions.okhttp3}"
+]
+deps.okhttp3 = okhttp3
+
+def retrofit = [
+        retrofit     : "com.squareup.retrofit2:retrofit:${versions.retrofit}",
+        rxAdapter    : "com.squareup.retrofit2:adapter-rxjava:${versions.retrofit}",
+        gsonConverter: "com.squareup.retrofit2:converter-gson:${versions.retrofit}",
+        logging      : "com.squareup.okhttp3:logging-interceptor:3.4.1"
+]
+deps.retrofit = retrofit
+
+def junit = [
+        junit: "junit:junit:${versions.junit}"
+]
+deps.junit = junit
+
+def gson = [
+        gson: "com.google.code.gson:gson:${versions.gson}"
+]
+deps.gson = gson
+
+def stetho = [
+        stetho       : "com.facebook.stetho:stetho:${versions.stetho}",
+        js_rhino     : "com.facebook.stetho:stetho-js-rhino:${versions.stetho}",
+        stetho_okhttp: "com.facebook.stetho:stetho-okhttp3:${versions.stetho}",
+        stethoRealm  : "com.uphyca:stetho_realm:2.3.0"
+]
+deps.stetho = stetho
+
+def lifecycle = [
+        runtime   : "android.arch.lifecycle:runtime:${versions.arch}",
+        extensions: "android.arch.lifecycle:extensions:${versions.arch}",
+        java8     : "android.arch.lifecycle:common-java8:${versions.arch}",
+        compiler  : "android.arch.lifecycle:compiler:${versions.arch}"
+]
+deps.lifecycle = lifecycle
+
+def room = [
+        runtime : "android.arch.persistence.room:runtime:${versions.arch}",
+        compiler: "android.arch.persistence.room:compiler:${versions.arch}",
+        rxjava2 : "android.arch.persistence.room:rxjava2:${versions.arch}",
+        testing : "android.arch.persistence.room:testing:${versions.arch}"
+]
+deps.room = room
+
+def leakCanary = [
+        core            : "com.squareup.leakcanary:leakcanary-android:${versions.leakCanary}",
+        support_fragment: "com.squareup.leakcanary:leakcanary-support-fragment:${versions.leakCanary}",
+        noOp            : "com.squareup.leakcanary:leakcanary-android-no-op:${versions.leakCanary}"
+]
+deps.leakCanary = leakCanary
+
+def rx = [
+        kotlin  : "io.reactivex.rxjava2:rxkotlin:${versions.rx}",
+        android2: "io.reactivex.rxjava2:rxandroid:2.1.0",
+        android1: "io.reactivex:rxandroid:1.2.1",
+        java1   : "io.reactivex:rxjava:${versions.rx}"
+]
+deps.rx = rx
+
+def advanced_recycler_view = [
+        lib: "com.h6ah4i.android.widget.advrecyclerview:advrecyclerview:${versions.advancedRecyclerview}@aar"
+]
+deps.advanced_recycler_view = advanced_recycler_view
+
+def dagger = [
+        core             : "com.google.dagger:dagger:${versions.dagger}",
+        compiler         : "com.google.dagger:dagger-compiler:${versions.dagger}",
+        android          : "com.google.dagger:dagger-android:${versions.dagger}",
+        android_support  : "com.google.dagger:dagger-android-support:${versions.dagger}",
+        android_processor: "com.google.dagger:dagger-android-processor:${versions.dagger}"
+]
+deps.dagger = dagger
+
+def constraintLayout = [
+        core: "androidx.constraintlayout:constraintlayout:${versions.constraintLayout}"
+]
+deps.constraintLayout = constraintLayout
+
+def multidex = [
+        core: "com.android.support:multidex:${versions.multidex}"
+]
+deps.multidex = multidex
+
+def facebook = [
+        core: "com.facebook.android:facebook-android-sdk:${versions.facebook}"
+]
+deps.facebook = facebook
+
+def butterKnife = [
+        butterKnife: "com.jakewharton:butterknife:${versions.butterKnife}",
+        compiler   : "com.jakewharton:butterknife-compiler:${versions.butterKnife}"
+]
+deps.butterKnife = butterKnife
+
+def eventBus = [
+        eventBus: "org.greenrobot:eventbus:${versions.eventBus}"
+]
+deps.eventBus = eventBus
+
+def firebase = [
+        core         : "com.google.firebase:firebase-core:16.0.4",
+        messaging    : "com.google.firebase:firebase-messaging:17.3.3",
+        jobDispatcher: "com.firebase:firebase-jobdispatcher:0.8.5",
+        config       : "com.google.firebase:firebase-config:16.0.0",
+        crash        : "com.google.firebase:firebase-crash:16.2.0"
+]
+deps.firebase = firebase
+
+def threaddebugger = [
+        threaddebugger    : "cn.dreamtobe.threaddebugger:threaddebugger:${versions.threaddebugger}",
+        threaddebuggerNoOp: "cn.dreamtobe.threaddebugger:threaddebugger-no-op:${versions.threaddebugger}"
+]
+deps.threaddebugger = threaddebugger
+
+def airbnb = [
+        deeplinkdispatch                   : "com.airbnb:deeplinkdispatch:${versions.airbnbDeepLink}",
+        deeplinkdispatchAnnotationProcessor: "com.airbnb:deeplinkdispatch-processor:${versions.airbnbDeepLink}"
+]
+deps.airbnb = airbnb
+
+def glide = [
+        glide   : "com.github.bumptech.glide:glide:${versions.glide}",
+        compiler: "com.github.bumptech.glide:compiler:${versions.glide}"
+]
+deps.glide = glide
+
+def playServices = [
+        location: "com.google.android.gms:play-services-location:${versions.playServices}",
+        maps    : "com.google.android.gms:play-services-maps:${versions.playServices}",
+        places  : "com.google.android.gms:play-services-places:${versions.playServices}",
+        mapUtils: "com.google.maps.android:android-maps-utils:0.5"
+]
+deps.playServices = playServices
+
+def brainTree = [
+        brainTree: "com.braintreepayments.api:braintree:2.3.9",
+        dropIn   : "com.braintreepayments.api:drop-in:2.3.8",
+        cardForm : "com.braintreepayments:card-form:2.3.2"
+]
+deps.brainTree = brainTree
+
+def realm = [
+        annotations         : "io.realm:realm-annotations:5.8.0",
+        annotationsProcessor: "io.realm:realm-annotations-processor:5.8.0"
+]
+deps.realm = realm
+
+def test = [
+        runner       : 'androidx.test:runner:1.1.0-alpha4',
+        espresso_core: 'androidx.test.espresso:espresso-core:3.1.0-alpha4'
+]
+deps.test = test
+
+def picasso = [
+        core: "com.squareup.picasso:picasso:2.71828"
+]
+deps.picasso = picasso
+
+def singleLibs = [
+        animBackground         : "com.wang.avi:library:2.1.3",
+
+        twilioVoice            : "com.twilio:voice-android:2.0.0-beta4",
+
+        materialCalendar       : "com.prolificinteractive:material-calendarview:1.4.3",
+
+        adapterDelegate        : "com.hannesdorfmann:adapterdelegates2:2.0.1",
+
+        timeConverter          : "com.github.curioustechizen.android-ago:library:1.3.4",
+
+        branchSDK              : "io.branch.sdk.android:library:2.19.3",
+
+        apmemFlowLayout        : "org.apmem.tools:layouts:1.10@aar",
+
+        nex3zFlowLayout        : "com.nex3z:flow-layout:1.2.2",
+
+        viewPagerIndicator     : "com.romandanylyk:pageindicatorview:1.0.2",
+
+        qrCodeGenerator        : "com.bottlerocketstudios:barcode:1.0.3@aar",
+
+        pdfViewer              : "com.github.barteksc:android-pdf-viewer:2.8.2",
+
+        junit                  : "junit:junit:4.12",
+
+        annotationJSR250       : "javax.annotation:jsr250-api:1.0",
+
+        easyPermissions        : "pub.devrel:easypermissions:2.0.0",
+
+        jwt                    : "com.auth0:java-jwt:3.4.0",
+
+        materialdatepicker     : "com.wdullaer:materialdatetimepicker:3.6.4",
+
+        bottomnavigation       : "com.aurelhubert:ahbottomnavigation:2.1.0",
+
+        multiviewpager         : "com.pixplicity.multiviewpager:library:1.0",
+
+        cropImage              : "com.soundcloud.android:android-crop:1.0.1@aar",
+
+        stripe                 : "com.stripe:stripe-android:8.0.0",
+
+        blurView               : "com.github.mmin18:realtimeblurview:1.1.2",
+
+        wasabeefFrescoProcessor: "jp.wasabeef:fresco-processors:2.1.0",
+
+        timeAgo                : "com.github.curioustechizen.android-ago:library:1.4.0",
+
+        shortcutBadger         : "me.leolin:ShortcutBadger:1.1.22@aar",
+
+        ioCard                 : "io.card:android-sdk:5.5.1",
+
+        edmodoImageCropper     : "com.theartofdev.edmodo:android-image-cropper:2.7.0",
+
+        scrollLikeiOS          : "me.everything:overscroll-decor-android:1.0.4",
+
+        imagezoom              : "it.sephiroth.android.library.imagezoom:imagezoom:2.3.0",
+
+        locationPicker         : "com.schibstedspain.android:leku:5.0.0",
+
+        weekView               : "com.github.alamkanak:android-week-view:1.2.6",
+
+        nammu                  : "com.github.tajchert:nammu:1.2.0",
+
+        easyImage              : "com.github.jkwiecien:EasyImage:1.2.1"
+]
+deps.singleLibs = singleLibs
+
+ext.deps = deps
+
+def build_versions = [
+        min_sdk    : 19,
+        target_sdk : 28,
+        compile_sdk: 28,
+        build_tools: "28.0.3"
+]
+ext.build_versions = build_versions
